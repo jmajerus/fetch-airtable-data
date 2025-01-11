@@ -6,15 +6,12 @@ kv_namespaces = [
   { binding = "LINKS_CACHE", id = "02ae18d056774dd8b0619180c767a3e6" }
 ]
 
-main = "worker/worker.js"  # Entry point for Worker
+main = "worker/worker.js"  # Entry point for Worker.
 compatibility_date = "2025-01-04"
-
-[observability.logs]
-enabled = true
 
 [env.staging]
 workers_dev = true
-
+  
 [env.production]
 route = "fetch-airtable-data.jmajerus.workers.dev/*"
 zone_id = "760804baffbf3cdb28094cab02683ea4"
