@@ -88,7 +88,7 @@ async function fetchCachedData(category, env) {
 
 // Fetch data from Airtable
 async function fetchFromAirtable(category, apiKey, baseId, tableName) {
-    const url = `https://api.airtable.com/v0/${baseId}/${tableName}?filterByFormula=FIND('${category}', {Category}) > 0`;
+    const url = `https://api.airtable.com/v0/${baseId}/${tableName}?filterByFormula={Category}='${category}'`;
 
     console.log(`Airtable URL: ${url}`);
 
